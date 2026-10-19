@@ -1,0 +1,498 @@
+{
+  "component_params": {
+    "pop_kind": "weighted_rating",
+    "cb_profile": "enhanced",
+    "icf_mode": "sum_liked",
+    "icf_k": 20,
+    "svd_params": {
+      "n_factors": 50,
+      "n_epochs": 30,
+      "lr_all": 0.005,
+      "reg_all": 0.05
+    },
+    "psvd_k": 384,
+    "tt_epochs": 11
+  },
+  "hybrid_variants": {
+    "Hybrid-Weighted": {
+      "name": "Hybrid-Weighted",
+      "kind": "weighted",
+      "generators": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd"
+      ],
+      "weights": {
+        "pop": 0.18602471360615944,
+        "cb": 0.3439553915927423,
+        "icf": 0.46257290770899445,
+        "svd": 0.0,
+        "psvd": 0.007446987092103743
+      },
+      "mmr_lambda": 1.0,
+      "signals": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd"
+      ],
+      "per_segment": false
+    },
+    "Hybrid-Weighted+F": {
+      "name": "Hybrid-Weighted+F",
+      "kind": "weighted",
+      "generators": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd"
+      ],
+      "weights": {
+        "pop": 0.18393322352997019,
+        "cb": 0.24277608707656423,
+        "icf": 0.4816469068094841,
+        "svd": 0.0,
+        "psvd": 0.020866473602510545,
+        "author": 0.07077730898147104,
+        "topic": 0.0
+      },
+      "mmr_lambda": 1.0,
+      "signals": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "author",
+        "topic"
+      ],
+      "per_segment": false
+    },
+    "Hybrid-Segment": {
+      "name": "Hybrid-Segment",
+      "kind": "weighted",
+      "generators": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd"
+      ],
+      "weights": {
+        "new": {
+          "pop": 0.18393322352997019,
+          "cb": 0.24277608707656423,
+          "icf": 0.4816469068094841,
+          "svd": 0.0,
+          "psvd": 0.020866473602510545,
+          "author": 0.07077730898147104,
+          "topic": 0.0
+        },
+        "short": {
+          "pop": 0.4506449830274397,
+          "cb": 0.338581404312517,
+          "icf": 0.21016289333053603,
+          "svd": 0.0,
+          "psvd": 0.0,
+          "author": 0.000610719329507329,
+          "topic": 0.0
+        },
+        "medium": {
+          "pop": 0.18375968844382928,
+          "cb": 0.24254703563944352,
+          "icf": 0.48119248842949486,
+          "svd": 0.0009434678673624626,
+          "psvd": 0.02084678675516141,
+          "author": 0.07071053286470864,
+          "topic": 0.0
+        },
+        "active": {
+          "pop": 0.1885788276668998,
+          "cb": 0.0,
+          "icf": 0.22556423027731043,
+          "svd": 0.23095090125518195,
+          "psvd": 0.24793373270535196,
+          "author": 0.031272576698417064,
+          "topic": 0.07569973139683879
+        },
+        "_global": {
+          "pop": 0.18393322352997019,
+          "cb": 0.24277608707656423,
+          "icf": 0.4816469068094841,
+          "svd": 0.0,
+          "psvd": 0.020866473602510545,
+          "author": 0.07077730898147104,
+          "topic": 0.0
+        }
+      },
+      "mmr_lambda": 1.0,
+      "signals": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "author",
+        "topic"
+      ],
+      "per_segment": true
+    },
+    "Hybrid-Weighted+TT": {
+      "name": "Hybrid-Weighted+TT",
+      "kind": "weighted",
+      "generators": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "tt"
+      ],
+      "weights": {
+        "pop": 0.04075496970583579,
+        "cb": 0.15178617292844404,
+        "icf": 0.0809752365967178,
+        "svd": 0.0,
+        "psvd": 0.0004084576370182692,
+        "tt": 0.7260751631319841
+      },
+      "mmr_lambda": 1.0,
+      "signals": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "tt"
+      ],
+      "per_segment": false
+    },
+    "Hybrid-Segment+TT": {
+      "name": "Hybrid-Segment+TT",
+      "kind": "weighted",
+      "generators": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "tt"
+      ],
+      "weights": {
+        "new": {
+          "pop": 0.0,
+          "cb": 0.07163135508315728,
+          "icf": 0.09229202756467174,
+          "svd": 0.000905551714895726,
+          "psvd": 0.0,
+          "author": 0.0,
+          "topic": 2.179182193447376e-06,
+          "tt": 0.8351688864550818
+        },
+        "short": {
+          "pop": 0.05860307279437107,
+          "cb": 0.09648931746451042,
+          "icf": 0.034810191857021555,
+          "svd": 0.0,
+          "psvd": 0.00044296557732100776,
+          "author": 0.0,
+          "topic": 0.0028901330430241923,
+          "tt": 0.8067643192637518
+        },
+        "medium": {
+          "pop": 0.0,
+          "cb": 0.036675344576145394,
+          "icf": 0.07350565455108224,
+          "svd": 0.001709566619389438,
+          "psvd": 0.0,
+          "author": 0.0012174319617053312,
+          "topic": 2.31413579615593e-06,
+          "tt": 0.8868896881558813
+        },
+        "active": {
+          "pop": 0.017576563369239805,
+          "cb": 0.10655247727321916,
+          "icf": 0.08926140247067944,
+          "svd": 0.0808807519797258,
+          "psvd": 0.15902826546141133,
+          "author": 0.02136598543457386,
+          "topic": 0.028245081090876478,
+          "tt": 0.49708947292027406
+        },
+        "_global": {
+          "pop": 0.0,
+          "cb": 0.07163135508315728,
+          "icf": 0.09229202756467174,
+          "svd": 0.000905551714895726,
+          "psvd": 0.0,
+          "author": 0.0,
+          "topic": 2.179182193447376e-06,
+          "tt": 0.8351688864550818
+        }
+      },
+      "mmr_lambda": 1.0,
+      "signals": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "author",
+        "topic",
+        "tt"
+      ],
+      "per_segment": true
+    },
+    "Hybrid-Improved": {
+      "name": "Hybrid-Improved",
+      "kind": "weighted",
+      "generators": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd"
+      ],
+      "weights": {
+        "new": {
+          "pop": 0.18393322352997019,
+          "cb": 0.24277608707656423,
+          "icf": 0.4816469068094841,
+          "svd": 0.0,
+          "psvd": 0.020866473602510545,
+          "author": 0.07077730898147104,
+          "topic": 0.0
+        },
+        "short": {
+          "pop": 0.4506449830274397,
+          "cb": 0.338581404312517,
+          "icf": 0.21016289333053603,
+          "svd": 0.0,
+          "psvd": 0.0,
+          "author": 0.000610719329507329,
+          "topic": 0.0
+        },
+        "medium": {
+          "pop": 0.18375968844382928,
+          "cb": 0.24254703563944352,
+          "icf": 0.48119248842949486,
+          "svd": 0.0009434678673624626,
+          "psvd": 0.02084678675516141,
+          "author": 0.07071053286470864,
+          "topic": 0.0
+        },
+        "active": {
+          "pop": 0.1885788276668998,
+          "cb": 0.0,
+          "icf": 0.22556423027731043,
+          "svd": 0.23095090125518195,
+          "psvd": 0.24793373270535196,
+          "author": 0.031272576698417064,
+          "topic": 0.07569973139683879
+        },
+        "_global": {
+          "pop": 0.18393322352997019,
+          "cb": 0.24277608707656423,
+          "icf": 0.4816469068094841,
+          "svd": 0.0,
+          "psvd": 0.020866473602510545,
+          "author": 0.07077730898147104,
+          "topic": 0.0
+        }
+      },
+      "mmr_lambda": 0.6,
+      "signals": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "author",
+        "topic"
+      ],
+      "per_segment": true
+    },
+    "Hybrid-Improved+TT": {
+      "name": "Hybrid-Improved+TT",
+      "kind": "weighted",
+      "generators": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "tt"
+      ],
+      "weights": {
+        "new": {
+          "pop": 0.0,
+          "cb": 0.07163135508315728,
+          "icf": 0.09229202756467174,
+          "svd": 0.000905551714895726,
+          "psvd": 0.0,
+          "author": 0.0,
+          "topic": 2.179182193447376e-06,
+          "tt": 0.8351688864550818
+        },
+        "short": {
+          "pop": 0.05860307279437107,
+          "cb": 0.09648931746451042,
+          "icf": 0.034810191857021555,
+          "svd": 0.0,
+          "psvd": 0.00044296557732100776,
+          "author": 0.0,
+          "topic": 0.0028901330430241923,
+          "tt": 0.8067643192637518
+        },
+        "medium": {
+          "pop": 0.0,
+          "cb": 0.036675344576145394,
+          "icf": 0.07350565455108224,
+          "svd": 0.001709566619389438,
+          "psvd": 0.0,
+          "author": 0.0012174319617053312,
+          "topic": 2.31413579615593e-06,
+          "tt": 0.8868896881558813
+        },
+        "active": {
+          "pop": 0.017576563369239805,
+          "cb": 0.10655247727321916,
+          "icf": 0.08926140247067944,
+          "svd": 0.0808807519797258,
+          "psvd": 0.15902826546141133,
+          "author": 0.02136598543457386,
+          "topic": 0.028245081090876478,
+          "tt": 0.49708947292027406
+        },
+        "_global": {
+          "pop": 0.0,
+          "cb": 0.07163135508315728,
+          "icf": 0.09229202756467174,
+          "svd": 0.000905551714895726,
+          "psvd": 0.0,
+          "author": 0.0,
+          "topic": 2.179182193447376e-06,
+          "tt": 0.8351688864550818
+        }
+      },
+      "mmr_lambda": 0.6,
+      "signals": [
+        "pop",
+        "cb",
+        "icf",
+        "svd",
+        "psvd",
+        "author",
+        "topic",
+        "tt"
+      ],
+      "per_segment": true
+    }
+  },
+  "config": {
+    "data_path": "C:\\Users\\Sergey\\Documents\\Личное\\Учеба\\3 Семестр\\Рекомендательные системы\\ИТОГОВЫЙ ПРОЕКТ\\archive.zip",
+    "models_dir": "C:\\Users\\Sergey\\Documents\\Личное\\Учеба\\3 Семестр\\Рекомендательные системы\\ИТОГОВЫЙ ПРОЕКТ\\FINAL_PROJECT\\models",
+    "results_dir": "C:\\Users\\Sergey\\Documents\\Личное\\Учеба\\3 Семестр\\Рекомендательные системы\\ИТОГОВЫЙ ПРОЕКТ\\FINAL_PROJECT\\results",
+    "figures_dir": "C:\\Users\\Sergey\\Documents\\Личное\\Учеба\\3 Семестр\\Рекомендательные системы\\ИТОГОВЫЙ ПРОЕКТ\\FINAL_PROJECT\\figures",
+    "random_state": 42,
+    "val_random_state": 43,
+    "holdout_fraction": 0.2,
+    "relevance_threshold": 4.0,
+    "segment_edges": [
+      5,
+      20
+    ],
+    "k_values": [
+      5,
+      10
+    ],
+    "tune_k": 10,
+    "n_val_users": 10000,
+    "n_tune_users": 3000,
+    "n_test_users": 10000,
+    "n_bootstrap": 1000,
+    "hw1_eval_users": 1000,
+    "hw1_negatives": 100,
+    "hw1_k": 5,
+    "hw1_icf_neighbors": 20,
+    "top_n_tags": 25,
+    "n_topics": 20,
+    "content_emb_dim": 64,
+    "min_author_books": 2,
+    "icf_max_neighbors": 200,
+    "icf_neighbors_grid": [
+      20,
+      50,
+      100,
+      200
+    ],
+    "icf_modes": [
+      "avg",
+      "sum_centered",
+      "sum_liked"
+    ],
+    "svd_hw1_params": {
+      "n_factors": 100,
+      "n_epochs": 20,
+      "lr_all": 0.005,
+      "reg_all": 0.02
+    },
+    "svd_grid": [
+      {
+        "n_factors": 100,
+        "n_epochs": 20,
+        "lr_all": 0.005,
+        "reg_all": 0.02
+      },
+      {
+        "n_factors": 50,
+        "n_epochs": 30,
+        "lr_all": 0.005,
+        "reg_all": 0.05
+      },
+      {
+        "n_factors": 150,
+        "n_epochs": 30,
+        "lr_all": 0.005,
+        "reg_all": 0.08
+      }
+    ],
+    "psvd_grid": [
+      64,
+      128,
+      256,
+      384
+    ],
+    "tt_emb_dim": 64,
+    "tt_hidden": 256,
+    "tt_out_dim": 64,
+    "tt_batch_size": 2048,
+    "tt_lr": 0.002,
+    "tt_weight_decay": 1e-06,
+    "tt_temperature": 0.07,
+    "tt_max_epochs": 25,
+    "tt_patience": 3,
+    "tt_min_delta": 0.001,
+    "tt_id_dropout": 0.15,
+    "tt_val_users": 4000,
+    "candidates_per_model": 50,
+    "n_random_weights": 300,
+    "mmr_top_m": 50,
+    "mmr_lambdas": [
+      1.0,
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.5,
+      0.4,
+      0.3
+    ],
+    "mmr_max_rel_drop": 0.03,
+    "switch_min_history": 5
+  }
+}
