@@ -2,3 +2,5 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 fast_check/
+
+FINAL_REVIEW.md
